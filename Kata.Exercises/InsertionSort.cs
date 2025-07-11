@@ -4,7 +4,7 @@ public class InsertionSort
 {
     public static void Sort<T>(T[] array) where T : IComparable<T>
     {
-        // implement here!
+        throw new NotImplementedException();
     }
 
     private static bool Less<T>(T v, T w) where T : IComparable<T> {
