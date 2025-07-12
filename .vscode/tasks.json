@@ -8,7 +8,7 @@
             "args": [
                 "test",
                 "--filter",
-                "FullyQualifiedName~${fileBasenameNoExtension}Test"
+                "FullyQualifiedName~${fileBasenameNoExtension}"
             ],
             "group": {
                 "kind": "build",
