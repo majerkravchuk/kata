@@ -4,33 +4,17 @@ namespace Kata.Exercises;
 
 public class LinkedListStack<T> : IStack<T>
 {
-    private class Node
-    {
-        public required T Item;
-        public Node? Next;
-    }
+    public bool IsEmpty => throw new NotImplementedException();
 
-    private Node? _first = null;
-
-    public bool IsEmpty => _first == null;
-
-    public int Size { get; private set; }
+    public int Size => throw new NotImplementedException();
 
     public T Pop()
     {
-        T item = _first.Item;
-        _first = _first.Next;
-        Size--;
-        return item;
+        throw new NotImplementedException();
     }
 
     public void Push(T item)
     {
-        _first = new Node
-        {
-            Item = item,
-            Next = _first,
-        };
-        Size++;
+        throw new NotImplementedException();
     }
 }
