@@ -1,9 +1,7 @@
 namespace Kata.Exercises;
 
-public class InsertionSort
-{
-    public static void Sort<T>(T[] array) where T : IComparable<T>
-    {
+public class InsertionSort {
+    public static void Sort<T>(T[] array) where T : IComparable<T> {
         throw new NotImplementedException();
     }
 

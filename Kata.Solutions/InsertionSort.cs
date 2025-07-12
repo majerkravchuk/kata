@@ -1,9 +1,7 @@
 namespace Kata.Solutions;
 
-public class InsertionSort
-{
-    public static void Sort<T>(T[] array) where T : IComparable<T>
-    {
+public class InsertionSort {
+    public static void Sort<T>(T[] array) where T : IComparable<T> {
         for (int i = 1; i < array.Length; i++)
             for (int j = i; j > 0 && Less(array[j], array[j - 1]); j--)
                 Exch(array, j, j - 1);

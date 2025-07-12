@@ -8,7 +8,9 @@
             "args": [
                 "test",
                 "--filter",
-                "FullyQualifiedName~${fileBasenameNoExtension}"
+                "FullyQualifiedName~${fileBasenameNoExtension}",
+                "--logger",
+                "\"console;verbosity=detailed\""
             ],
             "group": {
                 "kind": "build",

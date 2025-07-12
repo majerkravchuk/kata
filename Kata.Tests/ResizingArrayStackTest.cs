@@ -2,11 +2,9 @@ using Kata.Exercises;
 
 namespace Kata.Tests;
 
-public class ResizingArrayStackTest
-{
+public class ResizingArrayStackTest {
     [Fact]
-    public void TestStack()
-    {
+    public void TestStack() {
         var stack = new ResizingArrayStack<string>();
         Assert.Equal(0, stack.Size);
         Assert.Equal(1, stack.Capacity);

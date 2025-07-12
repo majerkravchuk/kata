@@ -2,11 +2,9 @@ using Kata.Exercises;
 
 namespace Kata.Tests;
 
-public class LinkedListStackTest
-{
+public class LinkedListStackTest {
     [Fact]
-    public void TestStack()
-    {
+    public void TestStack() {
         var stack = new LinkedListStack<string>();
         Assert.Equal(0, stack.Size);
 
