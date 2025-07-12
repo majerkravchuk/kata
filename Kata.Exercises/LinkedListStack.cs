@@ -1,11 +1,16 @@
+using System.Collections;
 using Kata.Common;
 
 namespace Kata.Exercises;
 
-public class LinkedListStack<T> : IStack<T> {
+public class LinkedListStack<T> : IStack<T>, IEnumerable<T> {
     public bool IsEmpty => throw new NotImplementedException();
 
     public int Size => throw new NotImplementedException();
+
+    public IEnumerator<T> GetEnumerator() {
+        throw new NotImplementedException();
+    }
 
     public T Pop() {
         throw new NotImplementedException();
@@ -14,4 +19,6 @@ public class LinkedListStack<T> : IStack<T> {
     public void Push(T item) {
         throw new NotImplementedException();
     }
+
+    IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
 }

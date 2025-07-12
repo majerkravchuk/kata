@@ -3,8 +3,10 @@ using Kata.Exercises;
 namespace Kata.Tests;
 
 public class LinkedListStackTest {
+    private const string Expected = "Hello, world!";
+
     [Fact]
-    public void TestStack() {
+    public void TestPushAndPop() {
         var stack = new LinkedListStack<string>();
         Assert.Equal(0, stack.Size);
 
@@ -27,6 +29,15 @@ public class LinkedListStackTest {
         while (!stack.IsEmpty)
             str += stack.Pop();
 
-        Assert.Equal("Hello, world!", str);
+        Assert.Equal(Expected, str);
+    }
+
+    [Fact]
+    public void TestEnumareble() {
+        var stack = new LinkedListStack<string>();
+        stack.Push("world!");
+        stack.Push(", ");
+        stack.Push("Hello");
+        Assert.Equal(Expected, string.Join("", stack));
     }
 }
