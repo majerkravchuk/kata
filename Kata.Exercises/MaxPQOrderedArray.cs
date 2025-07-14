@@ -5,9 +5,9 @@ namespace Kata.Exercises;
 public class MaxPQOrderedArray<T>(int capacity) : IPriorityQueue<T> where T : IComparable<T> {
     private readonly T[] _items = new T[capacity];
 
-    public bool IsEmpty => throw new NotImplementedException();
-
     public int Size => throw new NotImplementedException();
+
+    public bool IsEmpty => throw new NotImplementedException();
 
     public T DeleteMax() {
         throw new NotImplementedException();

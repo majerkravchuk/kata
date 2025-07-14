@@ -8,7 +8,7 @@
             "args": [
                 "test",
                 "--filter",
-                "FullyQualifiedName~${fileBasenameNoExtension}",
+                "FullyQualifiedName~${fileBasenameNoExtension}Test",
                 "--logger",
                 "\"console;verbosity=detailed\""
             ],
