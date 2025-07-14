@@ -2,7 +2,7 @@ using Kata.Common;
 
 namespace Kata.Solutions;
 
-public class UnorderedArrayMaxPQ<T>(int capacity) : IPriorityQueue<T> where T : IComparable<T> {
+public class MaxPQUnorderedArray<T>(int capacity) : IPriorityQueue<T> where T : IComparable<T> {
     private readonly T[] _items = new T[capacity];
 
     public bool IsEmpty => Size == 0;
@@ -13,7 +13,7 @@ public class UnorderedArrayMaxPQ<T>(int capacity) : IPriorityQueue<T> where T : 
         var m = 0;
 
         for (int i = 0; i < Size; i++)
-            if (Less(m, i)) m = i;
+            if (Less(_items[m], _items[i])) m = i;
 
         Exch(m, Size - 1);
         return _items[--Size];
@@ -23,8 +23,8 @@ public class UnorderedArrayMaxPQ<T>(int capacity) : IPriorityQueue<T> where T : 
         _items[Size++] = item;
     }
 
-    private bool Less(int v, int w) {
-        return _items[v].CompareTo(_items[w]) < 0;
+    private static bool Less(T v, T w) {
+        return v.CompareTo(w) < 0;
     }
 
     private void Exch(int i, int j) {

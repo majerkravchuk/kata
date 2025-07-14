@@ -2,10 +2,10 @@ using Kata.Exercises;
 
 namespace Kata.Tests;
 
-public class UnorderedArrayMaxPQTest {
+public class MaxPQUnorderedArrayTest {
     [Fact]
     public void TestPQ() {
-        var queue = new UnorderedArrayMaxPQ<string>(3);
+        var queue = new MaxPQUnorderedArray<string>(3);
         Assert.True(queue.IsEmpty);
         Assert.Equal(0, queue.Size);
 
