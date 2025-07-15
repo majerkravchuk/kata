@@ -3,10 +3,10 @@ namespace Kata.Exercises;
 /**
  * merge(l, m, h);
  *
- * [3, 9, 4, 7] array
- * [0  1][2  3] indexes
- *  l  m     h  passed to merge()
- *  i     j     internal pointers
+ * [3, 5, 9, 1, 4, 7] // array
+ * [0  1  2][3  4  5] // indexes
+ *  l     m        h  // passed to merge call
+ *  i        j        // internal pointers
  */
 
 public class MergeSort {
