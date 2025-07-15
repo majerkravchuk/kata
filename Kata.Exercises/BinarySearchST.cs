@@ -2,7 +2,10 @@ using Kata.Common;
 
 namespace Kata.Exercises;
 
-public class SequentialSearchST<TKey, TValue> : ISymbolTable<TKey, TValue> where TKey : IComparable<TKey> {
+public class BinarySearchST<TKey, TValue>(int capacity) : ISymbolTable<TKey, TValue> where TKey : IComparable<TKey> {
+    private readonly TKey[] _keys = new TKey[capacity];
+    private readonly TValue?[] _values = new TValue[capacity];
+
     public int Size => throw new NotImplementedException();
 
     public bool IsEmpty => throw new NotImplementedException();

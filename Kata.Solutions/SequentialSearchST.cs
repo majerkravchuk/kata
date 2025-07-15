@@ -3,15 +3,37 @@ using Kata.Common;
 namespace Kata.Solutions;
 
 public class SequentialSearchST<TKey, TValue> : ISymbolTable<TKey, TValue> where TKey : IComparable<TKey> {
-    public int Size => throw new NotImplementedException();
+    private class Node {
+        public required TKey Key;
+        public required TValue? Value;
+        public Node? Next;
+    }
 
-    public bool IsEmpty => throw new NotImplementedException();
+    public int Size { get; private set; } = 0;
+
+    public bool IsEmpty => Size == 0;
+
+    private Node? _first;
 
     public TValue? Get(TKey key) {
-        throw new NotImplementedException();
+        for (var x = _first; x != null; x = x.Next)
+            if (x.Key.Equals(key))
+                return x.Value;
+        return default;
     }
 
     public void Set(TKey key, TValue? value) {
-        throw new NotImplementedException();
+        for (var x = _first; x != null; x = x.Next)
+            if (x.Key.Equals(key)) {
+                x.Value = value;
+                return;
+            }
+
+        _first = new Node {
+            Key = key,
+            Value = value,
+            Next = _first
+        };
+        Size++;
     }
 }
