@@ -16,7 +16,7 @@ public class MaxPQOrderedArray<T>(int capacity) : IPriorityQueue<T> where T : IC
     public void Insert(T item) {
         int i = Size - 1;
         while (i >= 0 && Less(item, _items[i])) {
-            _items[i+1] = _items[i];
+            _items[i + 1] = _items[i];
             i--;
         }
         _items[i + 1] = item;
