@@ -10,4 +10,8 @@
       <ProjectReference Include="..\Kata.Base\Kata.Base.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="SymbolTables/" />
+    </ItemGroup>
+
 </Project>
