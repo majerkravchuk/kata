@@ -1,13 +1,14 @@
 using Kata.Exercises.SymbolTables.SequentialSearch;
+using Xunit.Abstractions;
 
 namespace Kata.Tests.SymbolTables.SequentialSearch;
 
-public class SequentialSearchSymbolTableExerciseGetTest
+public class SequentialSearchSetExerciseTest
 {
     [Fact]
-    public void TestGet()
+    public void TestSet()
     {
-        var ex = new SequentialSearchSymbolTableExerciseGet<string, string>();
+        var ex = new SequentialSearchSetExercise<string, string>();
 
         ex.Set("D", "Dog");
         ex.Set("C", "Cat");
