@@ -1,16 +1,10 @@
 namespace Kata.Base.Sorting;
 
-public class SelectionSortBase {
+public class InsertionSortExerciseBase {
     public virtual void Sort<T>(T[] array) where T : IComparable<T> {
-        for (var i = 0; i < array.Length; i++) {
-            var m = i;
-            for (var j = i + 1; j < array.Length; j++)
-                if (Less(array[j], array[m]))
-                    m = j;
-
-            if (m != i)
-                Exchange(array, m, i);
-        }
+        for (int i = 1; i < array.Length; i++)
+            for (int j = i; j > 0 && Less(array[j], array[j - 1]); j--)
+                Exchange(array, j, j - 1);
     }
 
     protected static bool Less<T>(T v, T w) where T : IComparable<T> {

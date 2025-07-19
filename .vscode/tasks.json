@@ -9,8 +9,6 @@
                 "test",
                 "--filter",
                 "FullyQualifiedName~${fileBasenameNoExtension}Test",
-                "--logger",
-                "\"console;verbosity=detailed\""
             ],
             "group": {
                 "kind": "build",
