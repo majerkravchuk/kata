@@ -1,14 +1,15 @@
-using Kata.Exercises;
+using Kata.Exercises.Sorting;
 
-namespace Kata.Tests;
+namespace Kata.Tests.Sorting;
 
-public class InsertionSortTest {
+public class SelectionSortExerciseTest {
     private static readonly int[] sorted = [3, 4, 7, 9, 42, 69, 420];
 
     [Fact]
     public void TestSort() {
+        var ex = new SelectionSortExercise();
         var array = new int[] { 9, 3, 7, 4, 69, 420, 42 };
-        InsertionSort.Sort(array);
+        ex.Sort(array);
         Assert.Equal(array, sorted);
     }
 }
