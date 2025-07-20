@@ -4,5 +4,6 @@
         "**/obj": true,
         "**/.idea": true
     },
-    "testing.automaticallyOpenTestResults": "openOnTestFailure"
+    "testing.automaticallyOpenTestResults": "openOnTestFailure",
+    "dotnettest"
 }
