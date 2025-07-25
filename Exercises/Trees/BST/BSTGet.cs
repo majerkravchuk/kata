@@ -1,23 +1,29 @@
 namespace Kata.Exercises.Trees.BST;
 
-public class BSTGet {
-    private static string? Get(string key) {
-        // ToDo: Implement insertion sort here!
-        return null;
+public class BSTGet
+{
+    private static TValue? Get<TKey, TValue>(Node<TKey, TValue> tree, TKey key)
+        where TKey : IComparable<TKey>
+    {
+        // ToDo: Implement Get method for BST here!
+        return default;
     }
 
     #region Test
 
-    private readonly Node<string, string> _root = new() {
+    private readonly Node<string, string> _root = new()
+    {
         Key = "D",
         Value = "Donkey",
-        Left = new Node<string, string> {
+        Left = new Node<string, string>
+        {
             Key = "C",
             Value = "Cat",
         },
-        Right = new Node<string, string> {
+        Right = new Node<string, string>
+        {
             Key = "M",
-            Value = "Mouser",
+            Value = "Mouse",
         }
     };
 
@@ -28,7 +34,7 @@ public class BSTGet {
     [InlineData("O", null)]
     public void TestGet(string key, string? expected)
     {
-        Assert.Equal(expected, Get(key));
+        Assert.Equal(expected, Get(_root, key));
     }
 
     #endregion

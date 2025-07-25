@@ -1,7 +1,9 @@
 namespace Kata.Exercises.Sorting;
 
-public class MergeSort {
-    private static void Sort<T>(T[] array) where T : IComparable<T> {
+public class MergeSort
+{
+    private static void Sort<T>(T[] array) where T : IComparable<T>
+    {
         // ToDo: Implement mergesort here!
     }
 

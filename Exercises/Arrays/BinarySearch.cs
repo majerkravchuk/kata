@@ -1,7 +1,9 @@
 namespace Kata.Exercises.Arrays;
 
-public class BinarySearch {
-    private static int IndexOf<T>(T[] array, T value) where T : IComparable<T> {
+public class BinarySearch
+{
+    private static int IndexOf<T>(T[] array, T value) where T : IComparable<T>
+    {
         // ToDo: Implement binary search here!
         return -1;
     }

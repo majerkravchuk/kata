@@ -1,7 +1,9 @@
 namespace Kata.Exercises.Sorting;
 
-public class SelectionSort {
-    private static void Sort<T>(T[] array) where T : IComparable<T> {
+public class SelectionSort
+{
+    private static void Sort<T>(T[] array) where T : IComparable<T>
+    {
         // ToDo: Implement selection sort here!
     }
 
