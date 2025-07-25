@@ -18,9 +18,4 @@
         <Using Include="Xunit"/>
     </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\Kata.Base\Kata.Base.csproj" />
-      <ProjectReference Include="..\Kata.Exercises\Kata.Exercises.csproj" />
-    </ItemGroup>
-
 </Project>

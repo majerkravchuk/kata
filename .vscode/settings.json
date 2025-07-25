@@ -3,7 +3,5 @@
         "**/bin": true,
         "**/obj": true,
         "**/.idea": true
-    },
-    "testing.automaticallyOpenTestResults": "openOnTestFailure",
-    "dotnettest"
+    }
 }
