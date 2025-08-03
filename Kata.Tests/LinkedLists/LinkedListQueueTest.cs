@@ -4,9 +4,11 @@ using Kata.Exercises.LinkedLists;
 namespace Kata.Tests.LinkedLists;
 
 [TestSubject(typeof(LinkedListQueue<>))]
-public class LinkedListQueueTest {
+public class LinkedListQueueTest
+{
     [Fact]
-    public void TestQueue() {
+    public void TestQueue()
+    {
         var queue = new LinkedListQueue<string>();
         Assert.Equal(0, queue.Size);
 

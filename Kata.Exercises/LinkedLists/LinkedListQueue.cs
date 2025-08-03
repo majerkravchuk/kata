@@ -1,7 +1,9 @@
 namespace Kata.Exercises.LinkedLists;
 
-public class LinkedListQueue<T> {
-    private class Node {
+public class LinkedListQueue<T>
+{
+    private class Node
+    {
         public required T Value;
         public Node? Next;
     }
@@ -11,11 +13,13 @@ public class LinkedListQueue<T> {
 
     public int Size { get; private set; }
 
-    public void Enqueue(T value) {
+    public void Enqueue(T value)
+    {
         throw new NotImplementedException();
     }
 
-    public T Dequeue() {
+    public T Dequeue()
+    {
         throw new NotImplementedException();
     }
 }

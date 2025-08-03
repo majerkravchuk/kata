@@ -1,7 +1,9 @@
 namespace Kata.Exercises.LinkedLists;
 
-public class LinkedListStack<T> {
-    private class Node {
+public class LinkedListStack<T>
+{
+    private class Node
+    {
         public required T Value;
         public Node? Next;
     }
@@ -10,11 +12,13 @@ public class LinkedListStack<T> {
 
     public int Size { get; private set; }
 
-    public void Push(T value) {
+    public void Push(T value)
+    {
         throw new NotImplementedException();
     }
 
-    public T Pop() {
+    public T Pop()
+    {
         throw new NotImplementedException();
     }
 }
