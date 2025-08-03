@@ -21,25 +21,29 @@ namespace Kata.Core.Sorting;
  * Reminder: swim (up) and sink (down)/
  */
 
-public class MaxPQBase<T>(int capacity) where T : IComparable<T> {
+public class MaxPQBase<T>(int capacity) where T : IComparable<T>
+{
     protected readonly T[] Items = new T[capacity + 1];
 
     public int Size { get; protected set; } = 0;
     public bool IsEmpty => Size <= 1;
 
-    public virtual void Insert(T item) {
+    public virtual void Insert(T item)
+    {
         Items[++Size] = item;
         for (var i = Size; i > 1 && Less(i / 2, i); i /= 2)
             Exchange(i / 2, i);
     }
 
-    public virtual T DeleteMax() {
+    public virtual T DeleteMax()
+    {
         var max = Items[1];
 
         var k = 1;
         Exchange(k, Size--);
 
-        while (k * 2 <= Size) {
+        while (k * 2 <= Size)
+        {
             var i = k * 2;
             if (i < Size && Less(i, i + 1)) i++;
             if (Less(i, k)) break;
@@ -50,11 +54,13 @@ public class MaxPQBase<T>(int capacity) where T : IComparable<T> {
         return max;
     }
 
-    protected bool Less(int i, int j) {
+    protected bool Less(int i, int j)
+    {
         return Items[i].CompareTo(Items[j]) < 0;
     }
 
-    protected void Exchange(int i, int j) {
+    protected void Exchange(int i, int j)
+    {
         (Items[i], Items[j]) = (Items[j], Items[i]);
     }
 }

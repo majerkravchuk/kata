@@ -4,9 +4,11 @@ using Kata.Exercises.Sorting.MaxPQ;
 namespace Kata.Tests.Sorting.MaxPQ;
 
 [TestSubject(typeof(MaxPQInsert<>))]
-public class MaxPQInsertTest {
+public class MaxPQInsertTest
+{
     [Fact]
-    public void TestInsert() {
+    public void TestInsert()
+    {
         var queue = new MaxPQInsert<string>(4);
         Assert.True(queue.IsEmpty);
         Assert.Equal(0, queue.Size);

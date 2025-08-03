@@ -4,9 +4,11 @@ using Kata.Exercises.Sorting.MaxPQ;
 namespace Kata.Tests.Sorting.MaxPQ;
 
 [TestSubject(typeof(MaxPQDeleteMax<>))]
-public class MaxPQDeleteMaxTest {
+public class MaxPQDeleteMaxTest
+{
     [Fact]
-    public void TestDeleteMax() {
+    public void TestDeleteMax()
+    {
         var queue = new MaxPQDeleteMax<string>(4);
         Assert.True(queue.IsEmpty);
         Assert.Equal(0, queue.Size);
