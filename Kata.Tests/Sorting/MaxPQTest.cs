@@ -1,15 +1,14 @@
 using JetBrains.Annotations;
-using Kata.Exercises.Sorting.MaxPQ;
+using Kata.Exercises.Sorting;
 
-namespace Kata.Tests.Sorting.MaxPQ;
+namespace Kata.Tests.Sorting;
 
-[TestSubject(typeof(MaxPQDeleteMax<>))]
-public class MaxPQDeleteMaxTest
-{
+[TestSubject(typeof(MaxPQ<>))]
+public class MaxPQTest {
+
     [Fact]
-    public void TestDeleteMax()
-    {
-        var queue = new MaxPQDeleteMax<string>(4);
+    public void TestPQ() {
+        var queue = new MaxPQ<string>(4);
         Assert.True(queue.IsEmpty);
         Assert.Equal(0, queue.Size);
 
