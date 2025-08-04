@@ -2,7 +2,8 @@ namespace Kata.Exercises.Sorting;
 
 public class QuickSort
 {
-    public static void Sort<T>(T[] array) where T : IComparable<T> {
+    public static void Sort<T>(T[] array) where T : IComparable<T>
+    {
         throw new NotImplementedException();
     }
 

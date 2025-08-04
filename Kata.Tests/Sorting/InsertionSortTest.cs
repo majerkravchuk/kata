@@ -11,7 +11,8 @@ public class InsertionSortTest
     [InlineData(new[] { 2, 1 })]
     [InlineData(new[] { 9, 3, 4 })]
     [InlineData(new[] { 9, 3, 7, 4, 69, 420, 42 })]
-    public void TestSort(int[] array) {
+    public void TestSort(int[] array)
+    {
         InsertionSort.Sort(array);
         Assert.True(ArrayHelper.IsSorted(array));
     }

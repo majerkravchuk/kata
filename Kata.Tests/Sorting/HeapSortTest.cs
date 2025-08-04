@@ -4,8 +4,8 @@ using Kata.Tests.Helpers;
 
 namespace Kata.Tests.Sorting;
 
-[TestSubject(typeof(MergeSort))]
-public class MergeSortTest
+[TestSubject(typeof(HeapSort))]
+public class HeapSortTest
 {
     [Theory]
     [InlineData(new[] { 2, 1 })]
@@ -13,7 +13,7 @@ public class MergeSortTest
     [InlineData(new[] { 9, 3, 7, 4, 69, 420, 42 })]
     public void TestSort(int[] array)
     {
-        MergeSort.Sort(array);
+        HeapSort.Sort(array);
         Assert.True(ArrayHelper.IsSorted(array));
     }
 }
