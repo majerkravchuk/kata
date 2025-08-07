@@ -21,30 +21,25 @@ namespace Kata.Exercises.Sorting;
  * Reminder: swim (up) and sink (down)/
  */
 
-public class MaxPQ<T>(int capacity) where T : IComparable<T>
-{
+public class MaxPQ<T>(int capacity) where T : IComparable<T> {
     private readonly T[] _items = new T[capacity + 1];
 
     public int Size { get; private set; }
     public bool IsEmpty => Size <= 1;
 
-    public void Insert(T item)
-    {
+    public void Insert(T item) {
         throw new NotImplementedException();
     }
 
-    public T DeleteMax()
-    {
+    public T DeleteMax() {
         throw new NotImplementedException();
     }
 
-    private bool Less(int i, int j)
-    {
+    private bool Less(int i, int j) {
         return _items[i].CompareTo(_items[j]) < 0;
     }
 
-    private void Exchange(int i, int j)
-    {
+    private void Exchange(int i, int j) {
         (_items[i], _items[j]) = (_items[j], _items[i]);
     }
 }

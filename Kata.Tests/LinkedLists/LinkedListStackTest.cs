@@ -4,11 +4,9 @@ using Kata.Exercises.LinkedLists;
 namespace Kata.Tests.LinkedLists;
 
 [TestSubject(typeof(LinkedListStack<>))]
-public class LinkedListStackTest
-{
+public class LinkedListStackTest {
     [Fact]
-    public void TestStack()
-    {
+    public void TestStack() {
         var stack = new LinkedListStack<string>();
         Assert.Equal(0, stack.Size);
 

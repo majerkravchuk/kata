@@ -4,12 +4,10 @@ using Kata.Exercises.Sorting;
 namespace Kata.Tests.Sorting;
 
 [TestSubject(typeof(MaxPQ<>))]
-public class MaxPQTest
-{
+public class MaxPQTest {
 
     [Fact]
-    public void TestPQ()
-    {
+    public void TestPQ() {
         var queue = new MaxPQ<string>(4);
         Assert.True(queue.IsEmpty);
         Assert.Equal(0, queue.Size);

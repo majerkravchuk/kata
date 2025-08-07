@@ -1,23 +1,19 @@
 namespace Kata.Exercises.Graphs;
 
-public class BreadthFirstPaths
-{
-    public class Graph
-    {
+public class BreadthFirstPaths {
+    public class Graph {
         private readonly List<LinkedList<int>> _adjacents;
 
         public int Size { get; }
 
-        public Graph(int size)
-        {
+        public Graph(int size) {
             Size = size;
             _adjacents = new List<LinkedList<int>>(size);
             for (var i = 0; i < size; i++)
                 _adjacents.Add(new LinkedList<int>());
         }
 
-        public void Connect(int v, int w)
-        {
+        public void Connect(int v, int w) {
             _adjacents[v].AddFirst(w);
             _adjacents[w].AddFirst(v);
         }
@@ -29,8 +25,7 @@ public class BreadthFirstPaths
     private readonly bool[] _visited;
     private readonly int[] _edgeTo;
 
-    public BreadthFirstPaths(Graph graph, int source)
-    {
+    public BreadthFirstPaths(Graph graph, int source) {
         _source = source;
         _visited = new bool[graph.Size];
         _edgeTo = new int[graph.Size];
@@ -38,13 +33,11 @@ public class BreadthFirstPaths
         BreadthFirstSearch(graph, source);
     }
 
-    public IEnumerable<int>? ShortestPath(int target)
-    {
+    public IEnumerable<int>? ShortestPath(int target) {
         throw new NotImplementedException();
     }
 
-    private void BreadthFirstSearch(Graph graph, int source)
-    {
+    private void BreadthFirstSearch(Graph graph, int source) {
         throw new NotImplementedException();
     }
 }

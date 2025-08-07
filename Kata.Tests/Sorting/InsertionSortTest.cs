@@ -5,14 +5,12 @@ using Kata.Tests.Helpers;
 namespace Kata.Tests.Sorting;
 
 [TestSubject(typeof(InsertionSort))]
-public class InsertionSortTest
-{
+public class InsertionSortTest {
     [Theory]
     [InlineData(new[] { 2, 1 })]
     [InlineData(new[] { 9, 3, 4 })]
     [InlineData(new[] { 9, 3, 7, 4, 69, 420, 42 })]
-    public void TestSort(int[] array)
-    {
+    public void TestSort(int[] array) {
         InsertionSort.Sort(array);
         Assert.True(ArrayHelper.IsSorted(array));
     }

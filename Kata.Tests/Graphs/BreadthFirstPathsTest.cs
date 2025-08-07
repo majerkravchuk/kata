@@ -4,12 +4,10 @@ using Kata.Exercises.Graphs;
 namespace Kata.Tests.Graphs;
 
 [TestSubject(typeof(BreadthFirstPaths))]
-public class BreadthFirstPathsTest
-{
+public class BreadthFirstPathsTest {
     private readonly BreadthFirstPaths _paths;
 
-    public BreadthFirstPathsTest()
-    {
+    public BreadthFirstPathsTest() {
         var graph = new BreadthFirstPaths.Graph(6);
 
         graph.Connect(0, 1);
@@ -22,20 +20,17 @@ public class BreadthFirstPathsTest
     }
 
     [Fact]
-    public void TestShortestPath()
-    {
+    public void TestShortestPath() {
         Assert.Equal([0, 3, 4], _paths.ShortestPath(4));
     }
 
     [Fact]
-    public void TestShortestPathToSelf()
-    {
+    public void TestShortestPathToSelf() {
         Assert.Equal([0], _paths.ShortestPath(0));
     }
 
     [Fact]
-    public void TestNoPath()
-    {
+    public void TestNoPath() {
         Assert.Null(_paths.ShortestPath(5));
     }
 }
